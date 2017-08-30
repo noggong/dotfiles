@@ -123,6 +123,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'bling/vim-airline'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
