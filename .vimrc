@@ -9,8 +9,7 @@ set nocompatible
 set clipboard=unnamed
 " Enhance command-line completion
 set wildmenu
-" Allow cursor keys in insert mode
-set esckeys
+" Allow cursor keys in insert mode set esckeys
 " Allow backspace in insert mode
 set backspace=indent,eol,start
 " Optimize for fast terminal connections
@@ -104,3 +103,42 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+" Vundle 설치
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'mattn/emmet-vim'
+Plugin 'valloric/youcompleteme'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'bling/vim-airline'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+" Put your non-Plugin stuff after this line
+
+" NerdTree Settings
+" 파일없을 때 자동으로 NerdTreeToggle
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Ctrl+n: NerdTreeToggle
+map <C-n> :NERDTreeToggle<CR>
+" 열린 vim 창없을 때는 Vim 닫기
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" NerdTree 화살표 모양 변경
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
