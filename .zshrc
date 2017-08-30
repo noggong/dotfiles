@@ -89,6 +89,7 @@ alias t="tmux"
 alias c="clear"
 alias e="exit"
 alias pip="pip3"
+alias p="python"
 
 # Vim default 대신 Vim 8 실행
 export PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
