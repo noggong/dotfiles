@@ -147,3 +147,9 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " NerdCommenter Mapleader 변경
 let mapleader="."
 set timeout timeoutlen=1500
+
+" 120자 초과시 highlight
+highlight OverLength ctermbg=red ctermfg=white guibg=red
+match OverLength /\%121v.\+/
+set textwidth=120
+set colorcolumn=120
