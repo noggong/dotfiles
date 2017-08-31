@@ -153,3 +153,6 @@ highlight OverLength ctermbg=red ctermfg=white guibg=red
 match OverLength /\%121v.\+/
 set textwidth=120
 set colorcolumn=120
+
+" Custom Settings
+so ~/.vim/settings.vim
