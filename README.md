@@ -5,7 +5,7 @@
 ## Manual Settings ##
 
 * Change input source shortcuts [CMD+Space] -> [Shift+Space] : http://macnews.tistory.com/297
-* Change Korean input source to gureum : https://github.com/gureum
+* Change Korean input source to gureum : https://github.com/gureum, http://macnews.tistory.com/2038
 * [CapsLock] -> [Ctrl]
 
 ## Installation
