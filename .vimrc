@@ -143,3 +143,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " NerdTree 화살표 모양 변경
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+
+" NerdCommenter Mapleader 변경
+let mapleader="."
+set timeout timeoutlen=1500
