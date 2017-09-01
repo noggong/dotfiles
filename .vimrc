@@ -105,7 +105,10 @@ if has("autocmd")
 endif
 
 
-" Vundle 설치
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 이 위는 최대한 https://github.com/mathiasbynens/dotfiles 유지
+" => Vundle 설치
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -128,30 +131,7 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
-
-" NerdTree Settings
-" 파일없을 때 자동으로 NerdTreeToggle
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" Ctrl+n: NerdTreeToggle
-map <C-n> :NERDTreeToggle<CR>
-" 열린 vim 창없을 때는 Vim 닫기
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" NerdTree 화살표 모양 변경
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-
-" NerdCommenter Mapleader 세팅
-set timeout timeoutlen=1500
-
-" 120자 초과시 highlight
-highlight OverLength ctermbg=red ctermfg=white guibg=red
-match OverLength /\%121v.\+/
-set textwidth=120
-set colorcolumn=120
-
-" Custom Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Settings 관리
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 so ~/.vim/settings.vim
-
-" Map jj as esc
-:imap jj <Esc>
