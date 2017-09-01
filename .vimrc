@@ -18,8 +18,8 @@ set ttyfast
 set gdefault
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
-" Change mapleader
-let mapleader=","
+" Change mapleader(NerdComment등에 사용)
+let mapleader="."
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
@@ -144,8 +144,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-" NerdCommenter Mapleader 변경
-let mapleader="."
+" NerdCommenter Mapleader 세팅
 set timeout timeoutlen=1500
 
 " 120자 초과시 highlight
@@ -156,3 +155,6 @@ set colorcolumn=120
 
 " Custom Settings
 so ~/.vim/settings.vim
+
+" Map jj as esc
+:imap jj <Esc>
