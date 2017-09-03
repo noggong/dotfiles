@@ -12,6 +12,7 @@ brew cask install alfred
 brew cask install cleanmymac
 brew cask install spectacle
 brew cask install moom
+brew cask arq  # backup
 
 # Development
 brew cask install iterm2
