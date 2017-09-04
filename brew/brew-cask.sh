@@ -26,3 +26,4 @@ brew cask install bettertouchtool
 # Documentation
 brew cask install macdown
 brew cask install adobe-acrobat-reader
+brew cask install nvalt
