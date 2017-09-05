@@ -115,3 +115,12 @@ export DROPBOX_ACCESS_TOKEN="Zzn7-4WyGDAAAAAAAAABdpLj4w8wsD_2E4_CEjavZqdNLDv_4Mb
 export MISO_URL="http://imisosang.com/admin/login.php"
 export MISO_ID="misosang"
 export MISO_PASSWORD="miso1231"
+
+# http://blog.nacyot.com/articles/2015-12-09-incremental-search-tool-peco/
+# shell history size 늘리기
+HISTSIZE=100000000
+SAVEHIST=100000000
+
+# OSX zsh에서 페코로 명령어 히스토리 검색하고 실행하기
+# http://blog.nacyot.com/articles/2015-12-09-incremental-search-tool-peco/
+source ~/.zsh/peco-history.zsh
