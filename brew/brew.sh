@@ -46,6 +46,10 @@ brew install tree
 
 # Zsh
 brew install zsh
+brew install reattach-to-user-namespace
+brew install zsh-completions
+brew install zsh-syntax-highlighting
+brew install zsh-history-substring-search
 
 brew install postgresql
 
@@ -61,9 +65,7 @@ brew install autoconf
 brew install redis
 
 # https://github.com/dylang/grunt-notify/issues/92
-brew install reattach-to-user-namespace
 
-brew install zsh-completions
-brew install zsh-syntax-highlighting
-brew install zsh-history-substring-search
+# Search within terminal
 brew install the_silver_searcher
+brew install peco
