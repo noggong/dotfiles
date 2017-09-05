@@ -19,6 +19,7 @@ brew cask install iterm2
 brew cask install sublime-text
 brew cask install dash
 brew cask install postman
+brew cask install postico
 
 # Productivity
 brew cask install 1password
