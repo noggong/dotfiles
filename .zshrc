@@ -124,3 +124,6 @@ SAVEHIST=100000000
 # OSX zsh에서 페코로 명령어 히스토리 검색하고 실행하기
 # http://blog.nacyot.com/articles/2015-12-09-incremental-search-tool-peco/
 source ~/.zsh/peco-history.zsh
+
+# PATH to rabbitmq used for celery on modernlab
+PATH=$PATH:/usr/local/sbin
