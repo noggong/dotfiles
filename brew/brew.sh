@@ -63,6 +63,7 @@ brew install automake
 brew install autoconf
 
 brew install redis
+brew install rabbitmq
 
 # https://github.com/dylang/grunt-notify/issues/92
 
