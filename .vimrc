@@ -131,6 +131,9 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
+"Use as ESCAPE
+imap jj <Esc>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Settings 관리
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
