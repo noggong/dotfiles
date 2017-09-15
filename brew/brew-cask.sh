@@ -13,6 +13,7 @@ brew cask install cleanmymac
 brew cask install spectacle
 brew cask install moom
 brew cask arq  # backup
+brew cask firefox
 
 # Development
 brew cask install iterm2
