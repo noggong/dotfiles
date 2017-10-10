@@ -14,6 +14,7 @@ brew cask install spectacle
 brew cask install moom
 brew cask arq  # backup
 brew cask firefox
+brew cask install gemini  # removes duplicate files
 
 # Development
 brew cask install iterm2
@@ -30,3 +31,5 @@ brew cask install bettertouchtool
 brew cask install macdown
 brew cask install adobe-acrobat-reader
 brew cask install nvalt
+
+brew cask ruby
