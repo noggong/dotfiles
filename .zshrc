@@ -110,12 +110,6 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 source /usr/local/opt/autoenv/activate.sh
 
-# environment variables
-export DROPBOX_ACCESS_TOKEN="Zzn7-4WyGDAAAAAAAAABdpLj4w8wsD_2E4_CEjavZqdNLDv_4Mbxpkm5IIiIp4pd"
-export MISO_URL="http://imisosang.com/admin/login.php"
-export MISO_ID="misosang"
-export MISO_PASSWORD="miso1231"
-
 # http://blog.nacyot.com/articles/2015-12-09-incremental-search-tool-peco/
 # shell history size 늘리기
 HISTSIZE=100000000
