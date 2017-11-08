@@ -54,6 +54,7 @@ Plug 'mattn/gist-vim'
 
 " Python
 Plug 'davidhalter/jedi-vim'
+Plug 'python-mode/python-mode'
 
 " Javascript
 Plug 'pangloss/vim-javascript'
