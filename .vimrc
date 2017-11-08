@@ -41,6 +41,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mileszs/ack.vim'
 Plug 'dyng/ctrlsf.vim'
+Plug 'airblade/vim-gitgutter'
 
 " Colorscheme
 Plug 'morhetz/gruvbox'
