@@ -12,5 +12,5 @@ set background=dark
 " Use  truecolors
 set termguicolors
 
-# Quickfix: Vim Tmux Nagivator not working with neovim, as written on README
+" Quickfix: Vim Tmux Nagivator not working with neovim, as written on README
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
