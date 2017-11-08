@@ -1,3 +1,39 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 이 아래는 최대한 https://github.com/mathiasbynens/dotfiles 유지
+" => Vundle 설치
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/vundles/ "submodules
+call vundle#rc()
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+runtime vim-improvements.vundle
+runtime git.vundle
+runtime python.vundle
+runtime js.vundle
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" To enable 256 colors in vim, put this your .vimrc before setting the colorscheme:
+" https://github.com/morhetz/gruvbox/issues/85: Cannot find color scheme gruvbox
+set t_Co=256
+" Enable syntax highlighting
+syntax on
+colorscheme gruvbox
+
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -36,8 +72,6 @@ set exrc
 set secure
 " Enable line numbers
 set number
-" Enable syntax highlighting
-syntax on
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
@@ -70,6 +104,10 @@ set title
 " Show the (partial) command as it’s being typed
 set showcmd
 " Use relative line numbers
+
+"Use as ESCAPE
+imap jj <Esc>
+
 if exists("&relativenumber")
 	set relativenumber
 	au BufReadPost * set relativenumber
@@ -100,35 +138,6 @@ if has("autocmd")
 endif
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => 이 위는 최대한 https://github.com/mathiasbynens/dotfiles 유지
-" => Vundle 설치
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=~/.vim/vundles/ "submodules
-call vundle#rc()
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-runtime vim-improvements.vundle
-runtime git.vundle
-runtime python.vundle
-runtime js.vundle
-
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-
-"Use as ESCAPE
-imap jj <Esc>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Settings 관리
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -138,15 +147,3 @@ so ~/.vim/settings.vim
 "https://stackoverflow.com/questions/20030603/vim-syntastic-how-to-disable-the-checker
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Neovim specific: 2017-11-08
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has('nvim')
-    colorscheme gruvbox
-    set t_Co=256
-    syntax on
-    set termguicolors
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-    tnoremap <Esc> <C-\><C-n>
-endif
