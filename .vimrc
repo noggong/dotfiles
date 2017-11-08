@@ -11,7 +11,14 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/Gundo'
 Plug 'tpope/vim-surround'
 Plug 'SirVer/ultisnips'
-Plug 'valloric/youcompleteme'
+
+function! BuildYCM(info)
+  if a:info.status == 'installed' || a:info.force
+    !./install.sh
+  endif
+endfunction
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 Plug 'christoomey/vim-tmux-navigator'
