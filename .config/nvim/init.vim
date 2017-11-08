@@ -11,3 +11,6 @@ let g:python_host_prog = '/Users/mhjeon/.pyenv/versions/neovim2/bin/python'
 set background=dark 
 " Use  truecolors
 set termguicolors
+
+# Quickfix: Vim Tmux Nagivator not working with neovim, as written on README
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
