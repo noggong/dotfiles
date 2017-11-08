@@ -2,27 +2,56 @@
 " => 이 아래는 최대한 https://github.com/mathiasbynens/dotfiles 유지
 " => Vundle 설치
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin('~/.local/share/nvim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=~/.vim/vundles/ "submodules
-call vundle#rc()
-call vundle#begin()
+Plug 'tpope/vim-sensible'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'majutsushi/tagbar'
+Plug 'vim-scripts/Gundo'
+Plug 'tpope/vim-surround'
+Plug 'SirVer/ultisnips'
+Plug 'valloric/youcompleteme'
+Plug 'ervandew/supertab'
+Plug 'Raimondi/delimitMate'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'Lokaltog/vim-easymotion'
+Plug 'scrooloose/syntastic'
+Plug 'vim-scripts/matchit.zip'
+Plug 'kien/ctrlp.vim'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-markdown'
+Plug 'rking/ag.vim'
+Plug 'chase/vim-ansible-yaml'
+Plug 'wakatime/vim-wakatime'
+Plug 'mattn/emmet-vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'rizzatti/dash.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'bling/vim-airline'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdcommenter'
+Plug 'mileszs/ack.vim'
+Plug 'dyng/ctrlsf.vim'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Colorscheme
+Plug 'morhetz/gruvbox'
 
-runtime vim-improvements.vundle
-runtime git.vundle
-runtime python.vundle
-runtime js.vundle
+" Git
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv'
+Plug 'mattn/gist-vim'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+" Python
+Plug 'davidhalter/jedi-vim'
+
+" Javascript
+Plug 'pangloss/vim-javascript'
+
+call plug#end()
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -147,3 +176,41 @@ so ~/.vim/settings.vim
 "https://stackoverflow.com/questions/20030603/vim-syntastic-how-to-disable-the-checker
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+Plug 'tpope/vim-sensible'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'majutsushi/tagbar'
+Plug 'vim-scripts/Gundo'
+Plug 'tpope/vim-surround'
+Plug 'SirVer/ultisnips'
+Plug 'valloric/youcompleteme'
+Plug 'ervandew/supertab'
+Plug 'Raimondi/delimitMate'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'Lokaltog/vim-easymotion'
+Plug 'scrooloose/syntastic'
+Plug 'vim-scripts/matchit.zip'
+Plug 'kien/ctrlp.vim'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-markdown'
+Plug 'rking/ag.vim'
+Plug 'chase/vim-ansible-yaml'
+Plug 'wakatime/vim-wakatime'
+Plug 'mattn/emmet-vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'rizzatti/dash.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'bling/vim-airline'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdcommenter'
+Plug 'mileszs/ack.vim'
+Plug 'dyng/ctrlsf.vim'
+Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv'
+Plug 'mattn/gist-vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'pangloss/vim-javascript'
