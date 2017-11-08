@@ -1,10 +1,3 @@
-" Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-
-
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -145,3 +138,15 @@ so ~/.vim/settings.vim
 "https://stackoverflow.com/questions/20030603/vim-syntastic-how-to-disable-the-checker
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Neovim specific: 2017-11-08
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has('nvim')
+    colorscheme gruvbox
+    set t_Co=256
+    syntax on
+    set termguicolors
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    tnoremap <Esc> <C-\><C-n>
+endif
