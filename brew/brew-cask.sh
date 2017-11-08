@@ -18,6 +18,7 @@ brew cask install gemini  # removes duplicate files
 
 # Development
 brew cask install iterm2
+brew cask neovim
 brew cask install sublime-text
 brew cask install dash
 brew cask install postman
