@@ -59,6 +59,9 @@ Plug 'python-mode/python-mode'
 " Javascript
 Plug 'pangloss/vim-javascript'
 
+" Tmux-airline
+Plug 'edkolev/tmuxline.vim'
+
 call plug#end()
 
 
@@ -180,7 +183,31 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 so ~/.vim/settings.vim
 
-"20171018 SyntasticToggleMode off as default
+" 20171018 SyntasticToggleMode off as default
 "https://stackoverflow.com/questions/20030603/vim-syntastic-how-to-disable-the-checker
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""
+ 20171018 
+ " => Python-mode related settings
+ """""""""""""""""""""""""""""""""""""""""""
+
+let g:pymode_options_max_line_length = 79
+let g:pymode_indent = 1
+
+" Enable automatic virtualenv detection
+let g:pymode_virtualenv = 1
+
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_bind = '<leader>b'
+
+let g:pymode_lint_on_fly = 0
+let g:pymode_lint_message = 1
+
+let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
+let g:pymode_folding = 0
+
+let g:pymode_rope_lookup_project = 0
+let g:pymode_rope = 0
