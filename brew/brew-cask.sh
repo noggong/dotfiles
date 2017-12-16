@@ -34,3 +34,6 @@ brew cask install adobe-acrobat-reader
 brew cask install nvalt
 
 brew cask ruby
+
+# Markdown editor
+brew cask typora
