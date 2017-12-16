@@ -125,3 +125,6 @@ PATH=$PATH:/usr/local/sbin
 
 # HOMEBREW_GITHUB_API_TOKEN
 export HOMEBREW_GITHUB_API_TOKEN="72d7885c8ef9bc3ad85826f223547869f7419318"
+
+# Set typora as default markdown editor
+alias typora="open -a typora"
