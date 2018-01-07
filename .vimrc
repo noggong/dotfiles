@@ -43,6 +43,10 @@ Plug 'mileszs/ack.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'airblade/vim-gitgutter'
 
+" Practical Vim page 29
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+
 " Colorscheme
 Plug 'morhetz/gruvbox'
 
@@ -90,7 +94,7 @@ set gdefault
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 " Change mapleader(NerdComment등에 사용)
-"let mapleader="."  # .을 사용하기 위해서 변경
+let mapleader=","
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
@@ -181,7 +185,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Settings 관리
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"so ~/.vim/settings.vim
+so ~/.vim/settings.vim
 
 "" 20171018 SyntasticToggleMode off as default
 ""https://stackoverflow.com/questions/20030603/vim-syntastic-how-to-disable-the-checker
