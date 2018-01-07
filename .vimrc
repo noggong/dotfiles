@@ -10,7 +10,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/Gundo'
 Plug 'tpope/vim-surround'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'  # , 느려짐, settings.autocomplete.vim도 수정
 
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
@@ -181,10 +181,10 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Settings 관리
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-so ~/.vim/settings.vim
+"so ~/.vim/settings.vim
 
-" 20171018 SyntasticToggleMode off as default
-"https://stackoverflow.com/questions/20030603/vim-syntastic-how-to-disable-the-checker
+"" 20171018 SyntasticToggleMode off as default
+""https://stackoverflow.com/questions/20030603/vim-syntastic-how-to-disable-the-checker
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
