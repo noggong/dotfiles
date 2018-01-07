@@ -90,7 +90,7 @@ set gdefault
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 " Change mapleader(NerdComment등에 사용)
-let mapleader="."
+"let mapleader="."  # .을 사용하기 위해서 변경
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
