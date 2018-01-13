@@ -1,6 +1,5 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => 이 아래는 최대한 https://github.com/mathiasbynens/dotfiles 유지
-" => Vundle 설치
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -42,10 +41,12 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'mileszs/ack.vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'airblade/vim-gitgutter'
-
+Plug 'bkad/CamelCaseMotion'
+Plug 'tpope/vim-surround'
 " Practical Vim page 29
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
+Plug 'tpope/vim-unimpaired'
 
 " Colorscheme
 Plug 'morhetz/gruvbox'
@@ -65,6 +66,9 @@ Plug 'pangloss/vim-javascript'
 
 " Tmux-airline
 Plug 'edkolev/tmuxline.vim'
+
+" Blockchain development
+Plug 'tomlion/vim-solidity'
 
 call plug#end()
 
@@ -181,7 +185,14 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
 
-
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+map <silent> ge <Plug>CamelCaseMotion_ge
+sunmap w
+sunmap b
+sunmap e
+sunmap ge
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Settings 관리
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
