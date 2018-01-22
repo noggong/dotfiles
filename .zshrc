@@ -51,7 +51,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions git-flow-completion)
+plugins=(git zsh-autosuggestions git-flow-completion docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,6 +91,7 @@ alias c="clear"
 alias e="exit"
 alias pip="pip3"
 alias p="python"
+alias vn="vim -u NONE -N"
 
 # Vim default 대신 Vim 8 실행
 export PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -128,3 +129,6 @@ export HOMEBREW_GITHUB_API_TOKEN="72d7885c8ef9bc3ad85826f223547869f7419318"
 
 # Set typora as default markdown editor
 alias typora="open -a typora"
+
+# zshrc-autosuggest bindkey
+bindkey '^ ' autosuggest-accept
