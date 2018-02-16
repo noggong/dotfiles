@@ -70,3 +70,5 @@ brew install rabbitmq
 # Search within terminal
 brew install the_silver_searcher
 brew install peco
+
+brew install docker
