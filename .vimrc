@@ -59,7 +59,7 @@ Plug 'mattn/gist-vim'
 
 " Python
 Plug 'davidhalter/jedi-vim'
-Plug 'python-mode/python-mode'
+Plug 'python-mode/python-mode', {'branch': 'develop'}
 
 " Javascript
 Plug 'pangloss/vim-javascript'
