@@ -9,7 +9,18 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/Gundo'
 Plug 'tpope/vim-surround'
-"Plug 'SirVer/ultisnips'  # , 느려짐, settings.autocomplete.vim도 수정
+
+"
+" Track the snippet engine.
+Plug 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
