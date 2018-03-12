@@ -238,3 +238,7 @@ let g:pymode_folding = 0
 
 let g:pymode_rope_lookup_project = 0
 let g:pymode_rope = 0
+
+"Remove all trailing whitespace by pressing F5
+"https://vi.stackexchange.com/questions/454/whats-the-simplest-way-to-strip-trailing-whitespace-from-all-lines-in-a-file
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
