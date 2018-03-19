@@ -37,3 +37,6 @@ brew cask ruby
 
 # Markdown editor
 brew cask typora
+
+# GitHub Readme Instant Preview
+brew cask grip
