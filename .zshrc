@@ -132,3 +132,7 @@ alias typora="open -a typora"
 
 # zshrc-autosuggest bindkey
 bindkey '^ ' autosuggest-accept
+
+# Go PATH 설정
+export GOPATH=$HOME/go
+PATH=$PATH:$GOPATH/bin
