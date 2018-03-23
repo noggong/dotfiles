@@ -39,6 +39,7 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'rking/ag.vim'
 Plug 'chase/vim-ansible-yaml'
 Plug 'wakatime/vim-wakatime'
@@ -75,6 +76,8 @@ Plug 'python-mode/python-mode', {'branch': 'develop'}
 
 " Javascript
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'jelera/vim-javascript-syntax'
 
 " Tmux-airline
 Plug 'edkolev/tmuxline.vim'
@@ -238,3 +241,8 @@ let g:pymode_folding = 0
 
 let g:pymode_rope_lookup_project = 0
 let g:pymode_rope = 0
+
+" To use github flavoured markdwon for 'JamshedVesuna/vim-markdown-preview'
+let vim_markdown_preview_github=1
+let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_temp_file=1
