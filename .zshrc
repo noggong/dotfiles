@@ -137,7 +137,10 @@ bindkey '^ ' autosuggest-accept
 export GOPATH=$HOME/go
 PATH=$PATH:$GOPATH/bin
 
-# NVM으로 node 버전 관리
+# NVM으로 node 버전 관리: https://gist.github.com/velopert/69c32f7a2460ad84f6b8f047d8b3c2e3
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Yarn의 global path 추가
+export PATH="$(yarn global bin):$PATH"
