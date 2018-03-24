@@ -79,11 +79,17 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'jelera/vim-javascript-syntax'
 
+" React
+Plug 'epilande/vim-react-snippets'
+
 " Tmux-airline
 Plug 'edkolev/tmuxline.vim'
 
 " Blockchain development
 Plug 'tomlion/vim-solidity'
+
+" Golang
+Plug 'fatih/vim-go'
 
 call plug#end()
 
