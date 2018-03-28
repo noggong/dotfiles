@@ -31,7 +31,8 @@ endfunction
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 Plug 'ervandew/supertab'
-Plug 'Raimondi/delimitMate'
+Plug 'jiangmiao/auto-pairs'
+"Plug 'Raimondi/delimitMate'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'scrooloose/syntastic'
@@ -252,3 +253,9 @@ let g:pymode_rope = 0
 let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='Google Chrome'
 let vim_markdown_preview_temp_file=1
+
+" Autopair 괄호에서 벗어나기
+" Jump outside '"({
+if !exists('g:AutoPairsShortcutJump')
+  let g:AutoPairsShortcutJump = '<C-l>'
+endif
