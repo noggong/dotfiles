@@ -134,7 +134,7 @@ alias typora="open -a typora"
 bindkey '^ ' autosuggest-accept
 
 # Go PATH 설정
-export GOPATH=$HOME/go
+export GOPATH=$HOME/projects/go
 PATH=$PATH:$GOPATH/bin
 
 # NVM으로 node 버전 관리: https://gist.github.com/velopert/69c32f7a2460ad84f6b8f047d8b3c2e3
