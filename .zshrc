@@ -103,15 +103,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 POWERLEVEL9K_ALWAYS_SHOW_USER=true
 POWERLEVEL9K_CONTEXT_TEMPLATE="%n"
 
-# pyenv 관련(https://jiyeonseo.github.io/2016/07/27/install-pyenv/) 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# pyenv-virtualenv(https://jiyeonseo.github.io/2016/07/27/install-pyenv/)
-eval "$(pyenv virtualenv-init -)"
-source /usr/local/opt/autoenv/activate.sh
-
 # http://blog.nacyot.com/articles/2015-12-09-incremental-search-tool-peco/
 # shell history size 늘리기
 HISTSIZE=100000000
@@ -144,3 +135,15 @@ export NVM_DIR="$HOME/.nvm"
 
 # Yarn의 global path 추가
 export PATH="$(yarn global bin):$PATH"
+
+# 초보몽키 - https://wayhome25.github.io/django/2017/04/29/python-dev-environments/
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+# pyenv-virtualenv(https://jiyeonseo.github.io/2016/07/27/install-pyenv/)
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# autoenv
+source /usr/local/opt/autoenv/activate.sh
