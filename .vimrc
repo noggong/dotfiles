@@ -8,7 +8,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/Gundo'
-Plug 'tpope/vim-surround'
 
 "
 " Track the snippet engine.
@@ -43,7 +42,6 @@ Plug 'plasticboy/vim-markdown'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'rking/ag.vim'
 Plug 'chase/vim-ansible-yaml'
-Plug 'wakatime/vim-wakatime'
 Plug 'mattn/emmet-vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'mustache/vim-mustache-handlebars'
@@ -92,6 +90,10 @@ Plug 'tomlion/vim-solidity'
 " Golang
 Plug 'fatih/vim-go'
 
+" HTML autoclose
+Plug 'alvan/vim-closetag'
+Plug 'ap/vim-css-color'
+
 call plug#end()
 
 
@@ -107,7 +109,10 @@ colorscheme gruvbox
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set clipboard=unnamed
+if $TMUX == ''
+    set clipboard+=unnamed
+endif
+"set clipboard=unnamed
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode set esckeys
@@ -227,9 +232,9 @@ nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""
- 20171018 
- " => Python-mode related settings
- """""""""""""""""""""""""""""""""""""""""""
+" 20171018
+" => Python-mode related settings
+"""""""""""""""""""""""""""""""""""""""""""
 
 let g:pymode_options_max_line_length = 79
 let g:pymode_indent = 1
@@ -257,5 +262,54 @@ let vim_markdown_preview_temp_file=1
 " Autopair 괄호에서 벗어나기
 " Jump outside '"({
 if !exists('g:AutoPairsShortcutJump')
-  let g:AutoPairsShortcutJump = '<C-l>'
+  let g:AutoPairsShortcutJump = '<M-n>'
 endif
+
+" Disable swap files
+set noswapfile
+
+" 한줄에 120
+let g:syntastic_python_pylint_post_args="--max-line-length=120"
+
+
+"""""""""""""""""""""""""""""""""""""""""
+" vim-closetag settings
+"""""""""""""""""""""""""""""""""""""""""
+
+" filenames like *.xml, *.html, *.xhtml, ...
+" These are the file extensions where this plugin is enabled.
+"
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.go'
+
+" filenames like *.xml, *.xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+
+" integer value [0|1]
+" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
+"
+let g:closetag_emptyTags_caseSensitive = 1
+
+" Shortcut for closing tags, default is '>'
+"
+let g:closetag_shortcut = '>'
+
+" Add > at current position without closing the current tag, default is ''
+"
+let g:closetag_close_shortcut = '<leader>>'
+
+
+"""""""""""""""""""""""""""""""""""""""""
+" vim-go
+"""""""""""""""""""""""""""""""""""""""""
+" format with goimports instead of gofmt
+let g:go_fmt_command = "goimports"
+
+
+"""""""""""""""""""""""""""""""""""""""""
+" vim-go
+"""""""""""""""""""""""""""""""""""""""""
+
+"let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
