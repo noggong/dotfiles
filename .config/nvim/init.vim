@@ -5,7 +5,8 @@ source ~/.vimrc
 " Separate virtual environments for Neovim, and only Neovim
 " https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
 let g:python3_host_prog = '/usr/local/var/pyenv/versions/neovim3/bin/python'
-let g:python_host_prog = '/usr/local/var/pyenv/versions/neovim2/bin/python'
+"let g:python_host_prog = '/usr/local/var/pyenv/versions/neovim2/bin/python'
+let g:ycm_python_binary_path = '/usr/local/var/pyenv/versions/neovim3/bin/python'
 
 " Use dark theme
 set background=dark 
