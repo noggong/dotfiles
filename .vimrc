@@ -109,10 +109,7 @@ colorscheme gruvbox
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
-if $TMUX == ''
-    set clipboard+=unnamed
-endif
-"set clipboard=unnamed
+set clipboard=unnamed
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode set esckeys
@@ -313,3 +310,5 @@ let g:go_fmt_command = "goimports"
 
 "let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+let g:ycm_python_binary_path = '/usr/local/var/pyenv/versions/neovim3/bin/python'
