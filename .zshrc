@@ -113,7 +113,7 @@ SAVEHIST=100000000
 source ~/.zsh/peco-history.zsh
 
 # PATH to rabbitmq used for celery on modernlab
-PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:/usr/local/sbin
 
 # HOMEBREW_GITHUB_API_TOKEN
 export HOMEBREW_GITHUB_API_TOKEN="72d7885c8ef9bc3ad85826f223547869f7419318"
@@ -121,12 +121,11 @@ export HOMEBREW_GITHUB_API_TOKEN="72d7885c8ef9bc3ad85826f223547869f7419318"
 # Set typora as default markdown editor
 alias typora="open -a typora"
 
-# zshrc-autosuggest bindkey
-bindkey '^ ' autosuggest-accept
-
-# Go PATH 설정
-export GOPATH=$HOME/projects/go
-PATH=$PATH:$GOPATH/bin
+## GOPATH & GOROOT 설정
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 
 # NVM으로 node 버전 관리: https://gist.github.com/velopert/69c32f7a2460ad84f6b8f047d8b3c2e3
 export NVM_DIR="$HOME/.nvm"
