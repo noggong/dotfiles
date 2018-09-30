@@ -1,42 +1,62 @@
 #!/usr/bin/env bash
 
-# Cloud
+# Google
 brew cask install google-chrome
-brew cask install google-drive
+brew cask install google-backup-and-sync
+brew cask install google-photos-backup-and-sync
+brew cask install google-drive-file-stream
+
+# Cloud
 brew cask install dropbox
 
-# Utils
+# Messager
 brew cask install slack
-brew cask install atext
+brew cask telegram-desktop
+brew cask discord
+
+# Productivity
 brew cask install alfred
-brew cask install cleanmymac
-brew cask install spectacle
 brew cask install moom
-brew cask arq  # backup
-brew cask firefox
-brew cask install gemini  # removes duplicate files
+brew cask install 1password
+brew cask install bettertouchtool
+brew cask install mindnode-pro
+brew cask install popclip
+
+# Utils
+brew cask install cleanmymac
+brew cask install gemini  # removes duplicates
+brew cask install hazeover
+brew cask install parallels
+brew cask install parallels-toolbox
+
+# Markdown editor
+brew cask bear
 
 # Development
 brew cask install iterm2
 brew cask neovim
-brew cask install sublime-text
-brew cask install dash
 brew cask install postman
 brew cask install postico
+brew cask install dash
+brew cask install sketch
+brew cask install docker
 
-# Productivity
-brew cask install 1password
-brew cask install bettertouchtool
+# Ebook
+brew cask kindle
+brew cask send-to-kindle
+brew cask calibre
 
 # Documentation
 brew cask install macdown
+brew cask install devonthink-pro
 brew cask install adobe-acrobat-reader
 brew cask install nvalt
+brew cask omnioutliner
+brew cask install scrivener
+brew cask install day-one
 
-brew cask ruby
+# Video
+brew cask install screenflow
 
-# Markdown editor
-brew cask typora
-
-# GitHub Readme Instant Preview
-brew cask grip
+# ToDo App
+brew cask omnifocus
