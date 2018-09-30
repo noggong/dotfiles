@@ -28,6 +28,7 @@ brew cask install gemini  # removes duplicates
 brew cask install hazeover
 brew cask install parallels
 brew cask install parallels-toolbox
+brew cask install easyfind  # centralized search
 
 # Markdown editor
 brew cask bear
