@@ -259,8 +259,7 @@ let vim_markdown_preview_temp_file=1
 " Autopair 괄호에서 벗어나기
 " Jump outside '"({
 if !exists('g:AutoPairsShortcutJump')
-  "let g:AutoPairsShortcutJump = '<M-n>'
-  let g:AutoPairsShortcutJump = '<C-L>'
+  let g:AutoPairsShortcutJump = '<M-n>'
 endif
 
 " Disable swap files
