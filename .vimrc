@@ -48,6 +48,8 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'bkad/CamelCaseMotion'
 Plug 'tpope/vim-surround'
+" fzf has been pre-installed with brew, with auto-completion & key-bindings support
+Plug '/usr/local/opt/fzf'
 " Practical Vim page 29
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'

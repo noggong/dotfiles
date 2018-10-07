@@ -146,3 +146,6 @@ eval "$(pyenv virtualenv-init -)"
 
 # autoenv
 source /usr/local/opt/autoenv/activate.sh
+
+# Fzf key-bindings and auto-completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
