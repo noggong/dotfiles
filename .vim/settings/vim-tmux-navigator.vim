@@ -8,3 +8,6 @@ nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+"
+" Quickfix: Vim Tmux Nagivator not working with neovim, as written on README
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>

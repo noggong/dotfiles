@@ -19,3 +19,10 @@ imap kk <Esc>
 
 " ==== Search
 nnoremap <CR> :noh<CR><CR>
+
+"Vim move cursor one character in insert mode without arrow keys
+inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" or "''" or '"' or ">" or "}" or "]" ? "\<Right>" : ")"
+
+"Use as ESCAPE
+imap jj <Esc>
+

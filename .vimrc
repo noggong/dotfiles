@@ -14,13 +14,6 @@ Plug 'vim-scripts/Gundo'
 Plug 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-let g:ultisnips_python_style='google'
-
 
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
@@ -132,6 +125,8 @@ set directory=~/.vim/swaps
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
+" Disable swap files
+set noswapfile
 
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
@@ -176,10 +171,6 @@ set title
 " Show the (partial) command as it’s being typed
 set showcmd
 " Use relative line numbers
-
-"Use as ESCAPE
-imap jj <Esc>
-
 if exists("&relativenumber")
 	set relativenumber
 	au BufReadPost * set relativenumber
@@ -217,98 +208,8 @@ sunmap w
 sunmap b
 sunmap e
 sunmap ge
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Settings 관리
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 so ~/.vim/settings.vim
-
-"" 20171018 SyntasticToggleMode off as default
-""https://stackoverflow.com/questions/20030603/vim-syntastic-how-to-disable-the-checker
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""
-" 20171018
-" => Python-mode related settings
-"""""""""""""""""""""""""""""""""""""""""""
-
-let g:pymode_options_max_line_length = 79
-let g:pymode_indent = 1
-
-" Enable automatic virtualenv detection
-let g:pymode_virtualenv = 1
-
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_bind = '<leader>b'
-
-let g:pymode_lint_on_fly = 0
-let g:pymode_lint_message = 1
-
-let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
-let g:pymode_folding = 0
-
-let g:pymode_rope_lookup_project = 0
-let g:pymode_rope = 0
-
-" To use github flavoured markdwon for 'JamshedVesuna/vim-markdown-preview'
-let vim_markdown_preview_github=1
-let vim_markdown_preview_browser='Google Chrome'
-let vim_markdown_preview_temp_file=1
-
-" Autopair 괄호에서 벗어나기
-" Jump outside '"({
-if !exists('g:AutoPairsShortcutJump')
-  let g:AutoPairsShortcutJump = '<M-n>'
-endif
-
-" Disable swap files
-set noswapfile
-
-" 한줄에 120
-let g:syntastic_python_pylint_post_args="--max-line-length=120"
-
-
-"""""""""""""""""""""""""""""""""""""""""
-" vim-closetag settings
-"""""""""""""""""""""""""""""""""""""""""
-
-" filenames like *.xml, *.html, *.xhtml, ...
-" These are the file extensions where this plugin is enabled.
-"
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.go'
-
-" filenames like *.xml, *.xhtml, ...
-" This will make the list of non-closing tags self-closing in the specified files.
-"
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
-
-" integer value [0|1]
-" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
-"
-let g:closetag_emptyTags_caseSensitive = 1
-
-" Shortcut for closing tags, default is '>'
-"
-let g:closetag_shortcut = '>'
-
-" Add > at current position without closing the current tag, default is ''
-"
-let g:closetag_close_shortcut = '<leader>>'
-
-
-"""""""""""""""""""""""""""""""""""""""""
-" vim-go
-"""""""""""""""""""""""""""""""""""""""""
-" format with goimports instead of gofmt
-let g:go_fmt_command = "goimports"
-
-
-"""""""""""""""""""""""""""""""""""""""""
-" vim-go
-"""""""""""""""""""""""""""""""""""""""""
-
-"let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
-let g:ycm_python_binary_path = '/usr/local/var/pyenv/versions/neovim3/bin/python'
