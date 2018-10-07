@@ -77,9 +77,6 @@ Plug 'epilande/vim-react-snippets'
 " Tmux-airline
 Plug 'edkolev/tmuxline.vim'
 
-" Blockchain development
-Plug 'tomlion/vim-solidity'
-
 " Golang
 Plug 'fatih/vim-go'
 
@@ -94,6 +91,12 @@ call plug#end()
 
 " To enable 256 colors in vim, put this your .vimrc before setting the colorscheme:
 " https://github.com/morhetz/gruvbox/issues/85: Cannot find color scheme gruvbox
+"
+" Use dark theme
+set background=dark 
+" Use  truecolors
+set termguicolors
+
 set t_Co=256
 " Enable syntax highlighting
 syntax on
