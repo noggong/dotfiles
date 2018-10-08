@@ -1,6 +1,3 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => 이 아래는 최대한 https://github.com/mathiasbynens/dotfiles 유지
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'tpope/vim-sensible'
@@ -9,22 +6,22 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/Gundo'
 
-"
-" Track the snippet engine.
-Plug 'SirVer/ultisnips'
-" Snippets are separated from the engine. Add this if you want them:
+" Deoplete and neosnippet for autocompletion and snippets
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+
+" Also include snippets from vim-snippets plugin
 Plug 'honza/vim-snippets'
 
-function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
-    !./install.sh
-  endif
-endfunction
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-
-Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
-"Plug 'Raimondi/delimitMate'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'scrooloose/syntastic'
@@ -88,9 +85,9 @@ Plug 'ap/vim-css-color'
 
 call plug#end()
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" => 이 아래는 최대한 https://github.com/mathiasbynens/dotfiles 유지
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " To enable 256 colors in vim, put this your .vimrc before setting the colorscheme:
 " https://github.com/morhetz/gruvbox/issues/85: Cannot find color scheme gruvbox
 "
