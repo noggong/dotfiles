@@ -54,6 +54,8 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(git zsh-autosuggestions git-flow-completion docker fasd)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.aliases
+source $HOME/.exports
 
 # User configuration
 
@@ -75,9 +77,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Vim default 대신 Vim 8 실행
-export PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-
 # Syntax-highlighting 활성화
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -94,30 +93,10 @@ SAVEHIST=100000000
 # http://blog.nacyot.com/articles/2015-12-09-incremental-search-tool-peco/
 source ~/.zsh/peco-history.zsh
 
-# PATH to rabbitmq used for celery on modernlab
-export PATH=$PATH:/usr/local/sbin
-
-# HOMEBREW_GITHUB_API_TOKEN
-export HOMEBREW_GITHUB_API_TOKEN="72d7885c8ef9bc3ad85826f223547869f7419318"
-
-# Set typora as default markdown editor
-alias typora="open -a typora"
-
-# Go development: install Go with brew
-export GOPATH="${HOME}/go/src/github.com/mhoonjeon/crawler"
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-
-test -d "${GOPATH}" || mkdir "${GOPATH}"
-test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
-
 # NVM으로 node 버전 관리: https://gist.github.com/velopert/69c32f7a2460ad84f6b8f047d8b3c2e3
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Yarn의 global path 추가
-export PATH="$(yarn global bin):$PATH"
 
 # 초보몽키 - https://wayhome25.github.io/django/2017/04/29/python-dev-environments/
 export PYENV_ROOT=/usr/local/var/pyenv

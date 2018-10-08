@@ -1,14 +1,41 @@
 #!/usr/bin/env bash
 
-# Make vim the default editor.
-export EDITOR='vim';
+######## Custom #####################################
 
-# Enable persistent REPL history for `node`.
-export NODE_REPL_HISTORY=~/.node_history;
-# Allow 32³ entries; the default is 1000.
-export NODE_REPL_HISTORY_SIZE='32768';
-# Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE='sloppy';
+# Go development: install Go with brew
+#export GOPATH="${HOME}/go"
+export GOPATH="${HOME}/go/src/github.com/mhoonjeon/crawler"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+test -d "${GOPATH}" || mkdir "${GOPATH}"
+test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+
+# Yarn의 global path 추가
+export PATH="$(yarn global bin):$PATH"
+
+# PATH to rabbitmq used for celery on modernlab
+export PATH=$PATH:/usr/local/sbin
+
+# PATH to rabbitmq used for celery on modernlab
+export PATH=$PATH:/usr/local/sbin
+
+# Vim default 대신 Vim 8 실행
+export PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+
+
+
+######## Below this line are the defaults ############
+# Make vim the default editor.
+export EDITOR='nvim';
+
+## Enable persistent REPL history for `node`.
+#export NODE_REPL_HISTORY=~/.node_history;
+## Allow 32³ entries; the default is 1000.
+#export NODE_REPL_HISTORY_SIZE='32768';
+## Use sloppy mode by default, matching web browsers.
+#export NODE_REPL_MODE='sloppy';
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';

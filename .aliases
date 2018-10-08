@@ -10,6 +10,13 @@ alias e="exit"
 alias pip="pip3"
 alias p="python"
 
+# Set typora as default markdown editor
+alias typora="open -a typora"
+
+
+
+
+################# Below this line are the defaults ##############
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
