@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
+# For a full list of active aliases, run `alias`.
+
+# Custom
+alias v="nvim"
+alias vim="nvim"
+alias t="tmux"
+alias c="clear"
+alias e="exit"
+alias pip="pip3"
+alias p="python"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -12,7 +22,7 @@ alias -- -="cd -"
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias pr="cd ~/projects"
 alias g="git"
 
 # Detect which `ls` flavor is in use
@@ -84,7 +94,7 @@ jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources
 unset jscbin;
 
 # Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
+alias cp="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"

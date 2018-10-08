@@ -75,24 +75,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias v="nvim"
-alias vim="nvim"
-alias t="tmux"
-alias c="clear"
-alias e="exit"
-alias pip="pip3"
-alias p="python"
-alias vn="vim -u NONE -N"
-
 # Vim default 대신 Vim 8 실행
 export PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
@@ -122,7 +104,7 @@ export HOMEBREW_GITHUB_API_TOKEN="72d7885c8ef9bc3ad85826f223547869f7419318"
 alias typora="open -a typora"
 
 # Go development: install Go with brew
-export GOPATH="${HOME}/go"
+export GOPATH="${HOME}/go/src/github.com/mhoonjeon/crawler"
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
