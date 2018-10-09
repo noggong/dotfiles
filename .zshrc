@@ -56,6 +56,7 @@ plugins=(git zsh-autosuggestions git-flow-completion docker fasd)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source $HOME/.exports
+source $HOME/.functions
 
 # User configuration
 
@@ -112,12 +113,3 @@ source /usr/local/opt/autoenv/activate.sh
 
 # Fzf key-bindings and auto-completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-function fzf-view() {
-    fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
-                 echo {} is a binary file ||
-                 (highlight -O ansi -l {} ||
-                  coderay {} ||
-                  rougify {} ||
-                  cat {}) 2> /dev/null | head -500'
-}

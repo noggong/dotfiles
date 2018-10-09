@@ -2,7 +2,7 @@
 # For a full list of active aliases, run `alias`.
 
 # Custom
-alias v="nvim"
+alias vi="nvim"
 alias vim="nvim"
 alias t="tmux"
 alias c="clear"
