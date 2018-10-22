@@ -94,11 +94,6 @@ SAVEHIST=100000000
 # http://blog.nacyot.com/articles/2015-12-09-incremental-search-tool-peco/
 source ~/.zsh/peco-history.zsh
 
-# NVM으로 node 버전 관리: https://gist.github.com/velopert/69c32f7a2460ad84f6b8f047d8b3c2e3
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # 초보몽키 - https://wayhome25.github.io/django/2017/04/29/python-dev-environments/
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
@@ -113,3 +108,16 @@ source /usr/local/opt/autoenv/activate.sh
 
 # Fzf key-bindings and auto-completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+function fzf-view() {
+    fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
+                 echo {} is a binary file ||
+                 (highlight -O ansi -l {} ||
+                  coderay {} ||
+                  rougify {} ||
+                  cat {}) 2> /dev/null | head -500'
+}
+
+# Install nvm
+export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

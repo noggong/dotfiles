@@ -1,19 +1,4 @@
-#!/usr/bin/env bash
-
-######## Custom #####################################
-function fzf-view() {
-    fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
-                 echo {} is a binary file ||
-                 (highlight -O ansi -l {} ||
-                  coderay {} ||
-                  rougify {} ||
-                  cat {}) 2> /dev/null | head -500'
-}
-
-
-
-
-######## Below this line are the defaults ############
+#!/usr/bin/env zsh
 
 # Create a new directory and enter it
 function mkd() {
@@ -187,7 +172,7 @@ function s() {
 
 # `v` with no arguments opens the current directory in Vim, otherwise opens the
 # given location
-function v() {
+function vi() {
 	if [ $# -eq 0 ]; then
 		vim .;
 	else
@@ -212,3 +197,13 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+function fzf-view() {
+    fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
+                 echo {} is a binary file ||
+                 (highlight -O ansi -l {} ||
+                  coderay {} ||
+                  rougify {} ||
+                  cat {}) 2> /dev/null | head -500'
+}
+
