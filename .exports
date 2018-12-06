@@ -4,12 +4,11 @@
 
 # Go development: install Go with brew
 export GOPATH="${HOME}/go"
-#export GOPATH="${HOME}/go/src/github.com/mhoonjeon/crawler"
 export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+export PATH=$PATH:${GOPATH}/bin:${GOROOT}/bin
 
-test -d "${GOPATH}" || mkdir "${GOPATH}"
-test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+#test -d "${GOPATH}" || mkdir "${GOPATH}"
+#test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 
 # PATH to rabbitmq used for celery on modernlab
 export PATH=$PATH:/usr/local/sbin
@@ -18,12 +17,7 @@ export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/usr/local/sbin
 
 # Vim default 대신 Vim 8 실행
-export PATH=/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-
-export PATH="/usr/local/Cellar/node/10.12.0/bin:$PATH"
-export PATH="$PATH:/opt/yarn-[version]/bin"
-export PATH="$PATH:`yarn global bin`"
-
+export PATH=$PATH:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 ######## Below this line are the defaults ############
 # Make vim the default editor.
