@@ -29,6 +29,10 @@ autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
 
+ " https://hackernoon.com/my-neovim-setup-for-go-7f7b6e805876
+autocmd Filetype go setlocal ts=4 sts=4 sw=4
+autocmd Filetype go set noexpandtab
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Highlight
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -6,13 +6,7 @@ imap <silent> <M-d> _
 imap <silent> <M-K> -
 imap <silent> <M-D> -
 
-" ==== NERD tree
-" Open the project tree and expose current file in the nerdtree with Ctrl-\
-nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>
-
-" ==== Tagbar
-nnoremap <silent> <C-t> :TagbarToggle<CR>
-
+"Use as ESCAPE
 imap jj <Esc>
 imap jk <Esc>
 imap kk <Esc>
@@ -22,6 +16,3 @@ nnoremap <CR> :noh<CR><CR>
 
 "Vim move cursor one character in insert mode without arrow keys
 inoremap <leader>c <ESC>la
-
-"Use as ESCAPE
-imap jj <Esc>

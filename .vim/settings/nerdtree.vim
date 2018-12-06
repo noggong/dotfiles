@@ -18,3 +18,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " NerdTree 화살표 모양 변경
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+
+" Open the project tree and expose current file in the nerdtree with Ctrl-\
+nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>

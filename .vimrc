@@ -21,6 +21,13 @@ Plug 'ervandew/supertab'
 " Autocomplete Golang
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 
+" Go debugging
+"Plug 'jodosha/vim-godebug'
+Plug 'sebdah/vim-delve'
+
+" Async Linting
+Plug 'w0rp/ale'
+
 Plug 'jiangmiao/auto-pairs'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Lokaltog/vim-easymotion'
@@ -143,8 +150,6 @@ set secure
 set number
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
-set tabstop=2
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
